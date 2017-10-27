@@ -1,0 +1,82 @@
+html {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: Helvetica;
+  background-color: azure;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+
+.main-image img {
+  width: auto;
+  height: 30rem;
+}
+
+.site-container {
+  width: 100%;
+  position: relative;
+  bottom: 30rem;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.banner {
+  width: 53.3rem;
+  height: 3rem;
+  font-size: 1rem;
+  background-color: cadetblue;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+nav {
+  display: flex;
+}
+
+li {
+  display: inline;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.slogan {
+  display: flex;
+  width: 31rem;
+  position: absolute;
+  top: 13rem;
+  left: 60%;
+  justify-content: center;
+  background-color: white;
+  padding-top: 1.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 1.5rem;
+}
+
+.slogan h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+}
