@@ -25,13 +25,6 @@ body {
   margin-top: 1rem;
 }
 
-/*iPad Pro media queries*/
-@media screen only and (max-width: 1024px) {
-  .site-container {
-    margin-top: 0;
-  }
-}
-
 .banner {
   width: 53.3rem;
   height: 3rem;
@@ -68,8 +61,7 @@ li {
 }
 
 .slogan {
-  display: flex;
-  width: 31rem;
+  width: auto;
   position: absolute;
   top: 13rem;
   left: 50%;
@@ -87,7 +79,6 @@ li {
   margin-top: 3rem;
   margin-bottom: 3rem;
   height: 8rem;
-  align-items: flex-start;
 }
 
 .exams,
@@ -147,4 +138,53 @@ footer {
 footer img {
   padding-right: 1rem;
   height: 1.5rem;
+}
+
+/*Tablet media queries*/
+
+@media only screen and (max-width: 1024px) {
+  .main-image {
+    height: 22rem;
+  }
+
+  .site-container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .banner {
+    width: 100%;
+  }
+
+  .slogan {
+    top: 10rem;
+    margin-right: 2rem;
+    width: inherit;
+  }
+
+  .slogan h1 {
+    padding: 0.75rem 4rem;
+    font-size: 1.33rem;
+  }
+
+  .about,
+  .middle {
+    position: relative;
+    top: 8rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .main-image {
+    height: 17rem;
+  }
+
+  .site-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logo p {
+    display: none;
+  }
 }
