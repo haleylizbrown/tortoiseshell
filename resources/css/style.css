@@ -3,188 +3,331 @@ html {
   line-height: 1.4;
   font-family: Helvetica;
   background-color: azure;
+  display: flex;
+  justify-content: center;
 }
 
 body {
   margin: 0;
-  width: 100%;
 }
 
-.main-image img {
-  width: auto;
-  height: 30rem;
-}
-
-.site-container {
+.top-desktop {
   width: 100%;
-  position: relative;
-  bottom: 30rem;
   display: flex;
   justify-content: center;
-  height: 100%;
-  margin-top: 1rem;
 }
 
-.banner {
-  width: 53.3rem;
-  height: 3rem;
-  font-size: 1rem;
-  background-color: cadetblue;
-  margin-right: 2rem;
+.top-mobile {
+  display: none;
+}
+
+.large-img {
   display: flex;
-  align-items: center;
-  color: white;
+}
+
+.large-img img {
+  height: 30rem;
+  width: 100%;
+}
+
+nav {
   display: flex;
+  position: absolute;
+  top: 1rem;
   justify-content: space-between;
+  background-color: cadetblue;
+  color: white;
+  width: 960px;
 }
 
-.logo {
+nav .header {
   display: flex;
   align-items: center;
 }
 
-.logo img {
+nav img {
   height: 1.5rem;
   padding-left: 2rem;
   padding-right: 1rem;
 }
 
-nav {
-  display: flex;
-}
-
-li {
+ul li {
   display: inline;
+  flex-direction: row;
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.slogan {
-  width: auto;
-  position: absolute;
-  top: 13rem;
-  left: 50%;
-  justify-content: center;
-  background-color: white;
-  padding-top: 1.5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-bottom: 1.5rem;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-.about {
+.slogan {
   display: flex;
+  position: absolute;
+  top: 10rem;
+  left: 43%;
+  background-color: white;
+}
+
+.slogan h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  padding: 1.5rem 5rem;
+}
+
+.services {
+  display: flex;
+  position: relative;
   justify-content: center;
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  width: 100%;
   height: 8rem;
+  margin-bottom: 3rem;
 }
 
-.exams,
-.fittings,
-.delivery {
+.services p {
   text-align: center;
+}
+
+.exams {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-right: 6rem;
+  justify-content: space-around;
+}
+
+.fittings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 6rem;
+  justify-content: space-around;
+}
+
+.delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .exams img {
   width: 3.5rem;
 }
 
-.fittings img,
+.fittings img {
+  width: 5rem;
+}
+
 .delivery img {
   width: 5rem;
 }
 
 .middle {
   display: flex;
-  justify-content: center;
+  position: relative;
   width: 100%;
-}
-
-.philosophy,
-.appointments {
-  width: 35%;
+  justify-content: center;
+  margin-bottom: 9rem;
 }
 
 .philosophy {
   padding-right: 5%;
 }
 
+.philosophy,
+.appointments {
+  display: flex;
+  width: 35%;
+  flex-direction: column;
+}
+
 .philosophy h3,
 .appointments h3 {
-  background-color: cadetblue;
+  width: 10rem;
   color: white;
+  background-color: cadetblue;
+  font-weight: bold;
+  font-size: 1rem;
   padding-left: 1.25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  font-weight: bold;
-  font-size: 1rem;
-  width: auto;
-  margin-bottom: 1rem;
 }
 
-footer {
-  margin-top: 9rem;
-  margin-left: 4rem;
-  margin-bottom: 4rem;
+.philosophy p,
+.appointments p {
+  margin-top: 1rem;
+}
+
+.footer {
   display: flex;
-  position: absolute;
-  top: 59rem;
+  padding-left: 4rem;
+  padding-bottom: 4rem;
   align-items: center;
 }
 
-footer img {
+.footer img {
   padding-right: 1rem;
   height: 1.5rem;
 }
 
-/*Tablet media queries*/
+@media screen and (max-width: 1024px){
 
-@media only screen and (max-width: 1024px) {
-  .main-image {
-    height: 22rem;
-  }
-
-  .site-container {
-    margin: 0;
+  nav {
     width: 100%;
+    position: absolute;
+    top: 0;
   }
 
-  .banner {
+  .large-img img {
+    height: 22rem;
     width: 100%;
   }
 
   .slogan {
+    position: absolute;
     top: 10rem;
-    margin-right: 2rem;
-    width: inherit;
   }
 
   .slogan h1 {
-    padding: 0.75rem 4rem;
+    font-weight: bold;
     font-size: 1.33rem;
-  }
-
-  .about,
-  .middle {
-    position: relative;
-    top: 8rem;
+    line-height: 1.2;
+    padding: 0.75rem 4rem;
   }
 }
 
-@media only screen and (max-width: 414px) {
-  .main-image {
-    height: 17rem;
+@media screen and (min-width: 375px) and (max-width: 752px) {
+
+  body {
+    background-position: 20%;
+    width: 100%;
   }
 
-  .site-container {
+  .top-mobile {
+    display: flex;
+    justify-content: center;
     width: 100%;
+  }
+
+  .large-img img {
+    width: 100%;
+    height: 17rem;
+    padding-bottom: 3.77rem;
+  }
+
+  .slogan {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 12rem;
+    left: 0rem;
+  }
+
+  .slogan h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .top-desktop {
+    display: none;
+  }
+
+  .top-mobile {
+    width: 100%;
+    display: flex;
     justify-content: center;
   }
 
-  .logo p {
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 2rem;
+  }
+
+  .header img,
+  .header a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3.77rem;
+    padding-top: 3.77rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .services p {
+    font-size: 0.77rem;
+  }
+
+  .exams,
+  .fittings,
+  .deliver {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exams p,
+  .fittings p {
+    padding-bottom: 1.54rem;
+  }
+
+  .exams p,
+  .fittings p {
+    padding-bottom: 1.54rem;
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .philosophy,
+  .appointments {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .philosophy h3,
+  .appointments h3 {
+    text-align: center;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+
+  .philosophy p,
+  .appointments p {
+    font-size: 0.77rem;
+    padding-bottom: 4rem;
+    width: 100%;
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .footer p {
     display: none;
   }
 }
